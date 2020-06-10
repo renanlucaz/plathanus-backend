@@ -1,6 +1,6 @@
 module.exports = {
     dialect: 'mysql',
-    host: 'localhost',
+    host: 'mysql',
     username: 'root',
     password: 'docker',
     database: 'plathanus',
