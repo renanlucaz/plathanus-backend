@@ -6,6 +6,7 @@ class Phone extends Model {
             {
                 phone: Sequelize.STRING,
                 pin: Sequelize.INTEGER,
+                validated: Sequelize.VIRTUAL,
             },
             {
                 sequelize,

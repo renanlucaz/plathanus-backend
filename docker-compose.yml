@@ -11,13 +11,12 @@ services:
 
     mysql:
         image: mysql:latest
-        command: --default-authentication-plugin=mysql_native_password
         volumes:
             - /var/lib/mysql
         environment:
+            DB_HOSTNAME: localhost
             MYSQL_DATABASE: plathanus
-            MYSQL_USER: root
             MYSQL_PASSWORD: docker
-            MYSQL_ROOT_PASSWORD: docker
         ports:
             - 3306:3306
+        hostname: localhost
