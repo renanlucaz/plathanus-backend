@@ -47,6 +47,7 @@ Além das validações feitas tanto pelo frontend como pelo backend.
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - Express
+- JWT
 - Node JS
 - React Native
 
