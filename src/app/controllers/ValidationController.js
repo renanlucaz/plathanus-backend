@@ -1,8 +1,6 @@
-import jwt from 'jsonwebtoken';
 import * as Yup from 'yup';
 
 import Phone from '../models/Phone';
-import authConfig from '../../config/authConfig';
 
 class ValidationController {
     async store(req, res) {
@@ -28,9 +26,6 @@ class ValidationController {
 
         return res.json({
             phone: pin.phone,
-            token: jwt.sign({ phone: pin.phone }, authConfig.secret, {
-                expiresIn: authConfig.expiresIn,
-            }),
         });
     }
 }

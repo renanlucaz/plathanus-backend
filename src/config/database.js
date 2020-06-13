@@ -1,11 +1,12 @@
+require('dotenv/config');
+
 module.exports = {
     dialect: 'mysql',
-    host: 'mysql',
-    username: 'root',
-    password: 'docker',
-    database: 'plathanus',
-    connectionLimit: '10',
-    port: '3306',
+    host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    socketPath: '/var/run/mysqld/mysqld.sock',
     define: {
         timestamps: true,
         underscored: true,
